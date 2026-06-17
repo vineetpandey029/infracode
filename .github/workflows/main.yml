@@ -1,0 +1,13 @@
+name: actionpractice
+
+on: 
+  workflow_dispatch: 
+
+jobs:
+  my_first_id:
+    name: My first job
+    runs-on: ubuntu-22.04
+    steps:
+     - name: Greeting
+       run: echo "hello world"
+      
