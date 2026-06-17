@@ -2,12 +2,15 @@ name: actionpractice
 
 on: 
   workflow_dispatch: 
-
+env:
+  FIRST_NAME: Mona
 jobs:
   my_first_id:
     name: My first job
     runs-on: ubuntu-22.04
     steps:
-     - name: Greeting
-       run: echo "hello world"
+    - name: Checkout
+      uses: actions/checkout@v6.0.3
+    - name: Greeting
+      run: echo "$FIRST_NAME"
       
